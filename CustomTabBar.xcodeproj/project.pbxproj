@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDA0B357177B9A92003F0D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B356177B9A92003F0D8C /* UIKit.framework */; };
+		DDA0B359177B9A92003F0D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B358177B9A92003F0D8C /* Foundation.framework */; };
+		DDA0B35B177B9A92003F0D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B35A177B9A92003F0D8C /* CoreGraphics.framework */; };
+		DDA0B361177B9A92003F0D8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDA0B35F177B9A92003F0D8C /* InfoPlist.strings */; };
+		DDA0B363177B9A92003F0D8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B362177B9A92003F0D8C /* main.m */; };
+		DDA0B367177B9A92003F0D8C /* CustomTabBarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B366177B9A92003F0D8C /* CustomTabBarAppDelegate.m */; };
+		DDA0B36A177B9A92003F0D8C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA0B368177B9A92003F0D8C /* MainStoryboard.storyboard */; };
+		DDA0B36D177B9A92003F0D8C /* CustomTabBarFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B36C177B9A92003F0D8C /* CustomTabBarFirstViewController.m */; };
+		DDA0B374177B9A92003F0D8C /* CustomTabBarSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */; };
+		DDA4BD461783958E0044E2C5 /* bottom-blue-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD3F1783958E0044E2C5 /* bottom-blue-bar.png */; };
+		DDA4BD471783958E0044E2C5 /* buy-button-off.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD401783958E0044E2C5 /* buy-button-off.png */; };
+		DDA4BD481783958E0044E2C5 /* buy-button-on.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD411783958E0044E2C5 /* buy-button-on.png */; };
+		DDA4BD491783958E0044E2C5 /* me-button-off.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD421783958E0044E2C5 /* me-button-off.png */; };
+		DDA4BD4A1783958E0044E2C5 /* me-button-on.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD431783958E0044E2C5 /* me-button-on.png */; };
+		DDA4BD4B1783958E0044E2C5 /* sell-button-off.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD441783958E0044E2C5 /* sell-button-off.png */; };
+		DDA4BD4C1783958E0044E2C5 /* sell-button-on.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA4BD451783958E0044E2C5 /* sell-button-on.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DDA0B352177B9A92003F0D8C /* CustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA0B356177B9A92003F0D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDA0B358177B9A92003F0D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDA0B35A177B9A92003F0D8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DDA0B35E177B9A92003F0D8C /* CustomTabBar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomTabBar-Info.plist"; sourceTree = "<group>"; };
+		DDA0B360177B9A92003F0D8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDA0B362177B9A92003F0D8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDA0B364177B9A92003F0D8C /* CustomTabBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomTabBar-Prefix.pch"; sourceTree = "<group>"; };
+		DDA0B365177B9A92003F0D8C /* CustomTabBarAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarAppDelegate.h; sourceTree = "<group>"; };
+		DDA0B366177B9A92003F0D8C /* CustomTabBarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarAppDelegate.m; sourceTree = "<group>"; };
+		DDA0B369177B9A92003F0D8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DDA0B36B177B9A92003F0D8C /* CustomTabBarFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarFirstViewController.h; sourceTree = "<group>"; };
+		DDA0B36C177B9A92003F0D8C /* CustomTabBarFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarFirstViewController.m; sourceTree = "<group>"; };
+		DDA0B372177B9A92003F0D8C /* CustomTabBarSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarSecondViewController.h; sourceTree = "<group>"; };
+		DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarSecondViewController.m; sourceTree = "<group>"; };
+		DDA4BD3F1783958E0044E2C5 /* bottom-blue-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottom-blue-bar.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/bottom-blue-bar.png"; sourceTree = "<group>"; };
+		DDA4BD401783958E0044E2C5 /* buy-button-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buy-button-off.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/buy-button-off.png"; sourceTree = "<group>"; };
+		DDA4BD411783958E0044E2C5 /* buy-button-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buy-button-on.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/buy-button-on.png"; sourceTree = "<group>"; };
+		DDA4BD421783958E0044E2C5 /* me-button-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me-button-off.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/me-button-off.png"; sourceTree = "<group>"; };
+		DDA4BD431783958E0044E2C5 /* me-button-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me-button-on.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/me-button-on.png"; sourceTree = "<group>"; };
+		DDA4BD441783958E0044E2C5 /* sell-button-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sell-button-off.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/sell-button-off.png"; sourceTree = "<group>"; };
+		DDA4BD451783958E0044E2C5 /* sell-button-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sell-button-on.png"; path = "../../LoppsClient/LoppsClient/Resources/Images/TabBar/sell-button-on.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDA0B34F177B9A92003F0D8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA0B357177B9A92003F0D8C /* UIKit.framework in Frameworks */,
+				DDA0B359177B9A92003F0D8C /* Foundation.framework in Frameworks */,
+				DDA0B35B177B9A92003F0D8C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDA0B347177B9A91003F0D8C = {
+			isa = PBXGroup;
+			children = (
+				DDA0B35C177B9A92003F0D8C /* CustomTabBar */,
+				DDA0B355177B9A92003F0D8C /* Frameworks */,
+				DDA0B353177B9A92003F0D8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDA0B353177B9A92003F0D8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0B352177B9A92003F0D8C /* CustomTabBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDA0B355177B9A92003F0D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0B356177B9A92003F0D8C /* UIKit.framework */,
+				DDA0B358177B9A92003F0D8C /* Foundation.framework */,
+				DDA0B35A177B9A92003F0D8C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDA0B35C177B9A92003F0D8C /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DDA4BD4E17839E6D0044E2C5 /* Classes */,
+				DDA4BD3E178394180044E2C5 /* TabBarImage */,
+				DDA4BD4D178395AD0044E2C5 /* Storyboard */,
+				DDA0B35D177B9A92003F0D8C /* Supporting Files */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		DDA0B35D177B9A92003F0D8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0B35E177B9A92003F0D8C /* CustomTabBar-Info.plist */,
+				DDA0B35F177B9A92003F0D8C /* InfoPlist.strings */,
+				DDA0B362177B9A92003F0D8C /* main.m */,
+				DDA0B364177B9A92003F0D8C /* CustomTabBar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDA4BD3E178394180044E2C5 /* TabBarImage */ = {
+			isa = PBXGroup;
+			children = (
+				DDA4BD3F1783958E0044E2C5 /* bottom-blue-bar.png */,
+				DDA4BD401783958E0044E2C5 /* buy-button-off.png */,
+				DDA4BD411783958E0044E2C5 /* buy-button-on.png */,
+				DDA4BD421783958E0044E2C5 /* me-button-off.png */,
+				DDA4BD431783958E0044E2C5 /* me-button-on.png */,
+				DDA4BD441783958E0044E2C5 /* sell-button-off.png */,
+				DDA4BD451783958E0044E2C5 /* sell-button-on.png */,
+			);
+			name = TabBarImage;
+			sourceTree = "<group>";
+		};
+		DDA4BD4D178395AD0044E2C5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0B368177B9A92003F0D8C /* MainStoryboard.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		DDA4BD4E17839E6D0044E2C5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0B365177B9A92003F0D8C /* CustomTabBarAppDelegate.h */,
+				DDA0B366177B9A92003F0D8C /* CustomTabBarAppDelegate.m */,
+				DDA0B36B177B9A92003F0D8C /* CustomTabBarFirstViewController.h */,
+				DDA0B36C177B9A92003F0D8C /* CustomTabBarFirstViewController.m */,
+				DDA0B372177B9A92003F0D8C /* CustomTabBarSecondViewController.h */,
+				DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDA0B351177B9A92003F0D8C /* CustomTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA0B37B177B9A92003F0D8C /* Build configuration list for PBXNativeTarget "CustomTabBar" */;
+			buildPhases = (
+				DDA0B34E177B9A92003F0D8C /* Sources */,
+				DDA0B34F177B9A92003F0D8C /* Frameworks */,
+				DDA0B350177B9A92003F0D8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomTabBar;
+			productName = CustomTabBar;
+			productReference = DDA0B352177B9A92003F0D8C /* CustomTabBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDA0B349177B9A91003F0D8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DDA0B34C177B9A91003F0D8C /* Build configuration list for PBXProject "CustomTabBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DDA0B347177B9A91003F0D8C;
+			productRefGroup = DDA0B353177B9A92003F0D8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDA0B351177B9A92003F0D8C /* CustomTabBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDA0B350177B9A92003F0D8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA0B361177B9A92003F0D8C /* InfoPlist.strings in Resources */,
+				DDA0B36A177B9A92003F0D8C /* MainStoryboard.storyboard in Resources */,
+				DDA4BD461783958E0044E2C5 /* bottom-blue-bar.png in Resources */,
+				DDA4BD471783958E0044E2C5 /* buy-button-off.png in Resources */,
+				DDA4BD481783958E0044E2C5 /* buy-button-on.png in Resources */,
+				DDA4BD491783958E0044E2C5 /* me-button-off.png in Resources */,
+				DDA4BD4A1783958E0044E2C5 /* me-button-on.png in Resources */,
+				DDA4BD4B1783958E0044E2C5 /* sell-button-off.png in Resources */,
+				DDA4BD4C1783958E0044E2C5 /* sell-button-on.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDA0B34E177B9A92003F0D8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA0B363177B9A92003F0D8C /* main.m in Sources */,
+				DDA0B367177B9A92003F0D8C /* CustomTabBarAppDelegate.m in Sources */,
+				DDA0B36D177B9A92003F0D8C /* CustomTabBarFirstViewController.m in Sources */,
+				DDA0B374177B9A92003F0D8C /* CustomTabBarSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DDA0B35F177B9A92003F0D8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA0B360177B9A92003F0D8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DDA0B368177B9A92003F0D8C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA0B369177B9A92003F0D8C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDA0B379177B9A92003F0D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDA0B37A177B9A92003F0D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDA0B37C177B9A92003F0D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTabBar/CustomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "CustomTabBar/CustomTabBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DDA0B37D177B9A92003F0D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CustomTabBar/CustomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "CustomTabBar/CustomTabBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDA0B34C177B9A91003F0D8C /* Build configuration list for PBXProject "CustomTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA0B379177B9A92003F0D8C /* Debug */,
+				DDA0B37A177B9A92003F0D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA0B37B177B9A92003F0D8C /* Build configuration list for PBXNativeTarget "CustomTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA0B37C177B9A92003F0D8C /* Debug */,
+				DDA0B37D177B9A92003F0D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDA0B349177B9A91003F0D8C /* Project object */;
+}
