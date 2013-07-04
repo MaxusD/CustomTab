@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="" image="me-button-off.png" id="7"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CQ9-Xz-UId"/>
+                    <tabBarItem key="tabBarItem" title="" image="sell-button-off.png" id="CQ9-Xz-UId"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1118" y="226"/>
@@ -74,7 +74,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="" image="buy-button-off.png" id="6"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -100,8 +100,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
+        <image name="buy-button-off.png" width="212" height="98"/>
+        <image name="me-button-off.png" width="212" height="98"/>
+        <image name="sell-button-off.png" width="212" height="98"/>
     </resources>
     <classes>
         <class className="CustomTabBarFirstViewController" superclassName="UIViewController">
