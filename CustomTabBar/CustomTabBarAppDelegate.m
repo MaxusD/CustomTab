@@ -17,14 +17,17 @@
     // Assign tab bar item with titles
     UITabBarController* tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar* tabBar = tabBarController.tabBar;
-    UITabBarItem* tabBarItem1 = [tabBar.items objectAtIndex:0];
-    UITabBarItem* tabBarItem2 = [tabBar.items objectAtIndex:1];
-    UITabBarItem* tabBarItem3 = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
     
     
     if ([tabBar respondsToSelector:@selector(setBackgroundImage:)]) {
         //iOS 5 code here
         [tabBar setBackgroundImage:[UIImage imageNamed:@"bottom-blue-bar.png"]];
+        tabBarItem1.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        tabBarItem2.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        tabBarItem3.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     } else {
         //iOS 4 support fix
         CGRect frame = CGRectMake(0, 0, 480, 49);
