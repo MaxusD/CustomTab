@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D910232E178AC65400979758 /* master_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D910232D178AC65400979758 /* master_bg@2x.png */; };
+		D9102330178AC91D00979758 /* buy-button-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D910232F178AC91D00979758 /* buy-button-on@2x.png */; };
 		DDA0B357177B9A92003F0D8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B356177B9A92003F0D8C /* UIKit.framework */; };
 		DDA0B359177B9A92003F0D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B358177B9A92003F0D8C /* Foundation.framework */; };
 		DDA0B35B177B9A92003F0D8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA0B35A177B9A92003F0D8C /* CoreGraphics.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D910232D178AC65400979758 /* master_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "master_bg@2x.png"; sourceTree = "<group>"; };
+		D910232F178AC91D00979758 /* buy-button-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-button-on@2x.png"; sourceTree = "<group>"; };
 		DDA0B352177B9A92003F0D8C /* CustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA0B356177B9A92003F0D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDA0B358177B9A92003F0D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +120,7 @@
 		DDA4BD3E178394180044E2C5 /* TabBarImage */ = {
 			isa = PBXGroup;
 			children = (
+				D910232D178AC65400979758 /* master_bg@2x.png */,
 				DDA280211784E5B400F87E64 /* bottom-blue-bar.png */,
 				DDA280221784E5B400F87E64 /* buy-button-off.png */,
 				DDA280231784E5B400F87E64 /* buy-button-on.png */,
@@ -123,6 +128,7 @@
 				DDA280251784E5B400F87E64 /* me-button-on.png */,
 				DDA280261784E5B400F87E64 /* sell-button-off.png */,
 				DDA280271784E5B400F87E64 /* sell-button-on.png */,
+				D910232F178AC91D00979758 /* buy-button-on@2x.png */,
 			);
 			name = TabBarImage;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 				DDA2802C1784E5B400F87E64 /* me-button-on.png in Resources */,
 				DDA2802D1784E5B400F87E64 /* sell-button-off.png in Resources */,
 				DDA2802E1784E5B400F87E64 /* sell-button-on.png in Resources */,
+				D910232E178AC65400979758 /* master_bg@2x.png in Resources */,
+				D9102330178AC91D00979758 /* buy-button-on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
