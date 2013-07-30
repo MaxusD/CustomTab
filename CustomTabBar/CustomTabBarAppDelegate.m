@@ -14,7 +14,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Assign tab bar item with titles
+    UITabBarController* tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar* tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+    
+    
+    if ([tabBar respondsToSelector:@selector(setBackgroundImage:)]) {
+        //iOS 5 code here
+        [tabBar setBackgroundImage:[UIImage imageNamed:@"bottom-blue-bar.png"]];
+        tabBarItem1.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        tabBarItem2.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        tabBarItem3.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    } else {
+        //iOS 4 support fix
+        CGRect frame = CGRectMake(0, 0, 480, 49);
+        UIView *tabbgView = [[UIView alloc]init];
+        UIImage *tabbgImage = [UIImage imageNamed:@"bottom-blue-bar.png"];
+        UIColor *tabbgColor = [[UIColor alloc]initWithPatternImage:tabbgImage];
+        tabbgView.backgroundColor = tabbgColor;
+        [tabBar insertSubview:tabbgView atIndex:0];
+    }
+     
+    /*[[[self tabBarController] tabBar] setBackgroundImage:[UIImage imageNamed:@"bottom-blue-bar.png"]];*/     
+    [tabBarItem1 setFinishedSelectedImage: [UIImage imageNamed:@"buy-button-on.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"buy-button-off.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"me-button-on.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"me-button-off.png"]];
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"sell-button-on.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"sell-button-off.png"]];
+        
+    
     return YES;
 }
 							
