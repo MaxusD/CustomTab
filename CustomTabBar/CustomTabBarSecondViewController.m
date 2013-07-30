@@ -81,17 +81,17 @@
         
         //bottom label
         CGRect bottomLabelFrame = CGRectMake(image.size.width + 2.0 * cell.indentationWidth, 
-                                             0.5 * (tableView.rowHeight - 2 * LABEL_HEIGHT), 
+                                             0.5 * (tableView.rowHeight - 2 * LABEL_HEIGHT) + LABEL_HEIGHT, 
                                              tableView.bounds.size.width - image.size.width - 
                                              4.0 * cell.indentationWidth - indicatorImage.size.width,LABEL_HEIGHT);
         bottomLabel = [[UILabel alloc] initWithFrame:bottomLabelFrame];
         [cell.contentView addSubview:bottomLabel];
         
-        topLabel.tag = 2;
-        topLabel.backgroundColor = [UIColor clearColor];
-        topLabel.textColor = [UIColor colorWithRed:0.25 green:0.0 blue:0.0 alpha:1.0];
-        topLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
-        topLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize]-2];
+        bottomLabel.tag = 2;
+        bottomLabel.backgroundColor = [UIColor clearColor];
+        bottomLabel.textColor = [UIColor colorWithRed:0.25 green:0.0 blue:0.0 alpha:1.0];
+        bottomLabel.highlightedTextColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:1.0];
+        bottomLabel.font = [UIFont systemFontOfSize:[UIFont labelFontSize]-2];
         
         cell.backgroundView = [UIImageView new];
         cell.selectedBackgroundView = [UIImageView new];
@@ -118,7 +118,7 @@
     }
     else if (row == sectionRows - 1) {
         rowBackground = [UIImage imageNamed:@"bottomRow.png"];
-        sectionRows = [UIImage imageNamed:@"bottomRowSelected.png"];
+        selectionBackground = [UIImage imageNamed:@"bottomRowSelected.png"];
     }
     else {
         rowBackground = [UIImage imageNamed:@"middleRow.png"];
