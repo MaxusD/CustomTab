@@ -7,6 +7,7 @@
 //
 
 #import "CustomTabBarThirdViewController.h"
+#import "Annotation.h"
 
 @implementation CustomTabBarThirdViewController
 
@@ -44,6 +45,7 @@
 {
     [super viewDidLoad];
      map.showsUserLocation = YES;
+    map.delegate = self;
     [map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:[NSArray arrayWithObjects:@"Map", @"Sattelite", @"Hibride", nil]];
@@ -53,6 +55,28 @@
     segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
     
     [self.view addSubview:segmentedControl];
+    
+    Annotation *annotation = [Annotation new];
+    annotation.title = @"Annotation1";
+    annotation.subtitle = @"Subtitle example";
+    annotation.coordinate = CLLocationCoordinate2DMake(48.298674f, 35.395776f);
+    [map addAnnotation:annotation];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKPinAnnotationView *annotationView = nil;
+    
+    if (annotation != mapView.userLocation) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+        if ([[annotation title] isEqualToString:@"Annotation1"]) {
+            [annotationView setPinColor:MKPinAnnotationColorRed];
+        } else {
+            [annotationView setPinColor:MKPinAnnotationColorGreen];
+            annotationView.animatesDrop = YES;
+            annotationView.canShowCallout = YES;
+        }
+    }
+    return annotationView;
 }
 
 - (void)changedMapType:(UISegmentedControl *)sender {
