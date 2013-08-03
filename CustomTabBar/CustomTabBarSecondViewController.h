@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomTabBarSecondViewController : UIViewController
+@interface CustomTabBarSecondViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+    UITableView *tableView;
+    NSArray *list;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSArray *list;
 
 @end
