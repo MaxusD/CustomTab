@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTabBarFirstViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIImageView *headerImage;
 @end

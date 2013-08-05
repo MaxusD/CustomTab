@@ -13,6 +13,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="zvm-Mh-Lka">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="About screen" textAlignment="center" id="ORM-9m-TDK">
                                 <rect key="frame" x="20" y="63" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,6 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -34,6 +39,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="me-button-off.png" id="7"/>
                     <navigationItem key="navigationItem" title="Title" id="EdV-7e-EwH"/>
+                    <connections>
+                        <outlet property="headerImage" destination="zvm-Mh-Lka" id="z2s-Ad-Q2l"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="635" y="-260"/>
@@ -64,54 +72,112 @@
             </objects>
             <point key="canvasLocation" x="1198" y="164"/>
         </scene>
+        <scene sceneID="UEp-sp-sRr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8n-MC-ojh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="lQX-9Z-FMj" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AzR-pc-xG4">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UWs-P8-cYe">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lQX-9Z-FMj" id="WDz-sC-PNh"/>
+                            <outlet property="delegate" destination="lQX-9Z-FMj" id="dsI-b8-jTz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="296" y="997"/>
+        </scene>
         <scene sceneID="13">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
-                <viewController title="Second" id="3" customClass="CustomTabBarSecondViewController" sceneMemberID="viewController">
+                <viewController title="Second" id="3" customClass="TicketListTable" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ewd-8r-FaF">
-                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="WsK-nn-hbI">
+                                <rect key="frame" x="0.0" y="14" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="headTruncation" minimumFontSize="10" id="pi3-o1-per">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Reuse Identifier" id="9ub-aZ-VvQ">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TicketCell" rowHeight="80" id="7WX-6a-O3V" customClass="TicketCell">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vDr-te-tD9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zmm-FB-RSz">
+                                                    <rect key="frame" x="81" y="8" width="207" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="NRW-eb-iAn">
+                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="LFv-2q-02H">
+                                                    <rect key="frame" x="81" y="38" width="207" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="backImageView" destination="vDr-te-tD9" id="Vgk-OR-cWg"/>
+                                            <outlet property="descriptionTicketLabel" destination="LFv-2q-02H" id="ty4-fd-zNC"/>
+                                            <outlet property="ticketImageView" destination="NRW-eb-iAn" id="Naa-wZ-DzA"/>
+                                            <outlet property="ticketLable" destination="Zmm-FB-RSz" id="e6k-Pc-TGm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="3" id="jco-OX-3G7"/>
-                                    <outlet property="delegate" destination="3" id="ZfO-GU-ec3"/>
+                                    <outlet property="dataSource" destination="3" id="ufU-m8-PZT"/>
+                                    <outlet property="delegate" destination="3" id="8Ul-W0-R6q"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" id="elT-2Z-gR7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Tickets' list" id="h73-Az-dSM"/>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="3" id="bBe-yH-zhA"/>
-                                </connections>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="buy-button-off.png" id="6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="Ewd-8r-FaF" id="Gms-Hj-nUo"/>
+                        <outlet property="headerTable" destination="pi3-o1-per" id="K20-BG-tf1"/>
+                        <outlet property="ticketTableView" destination="WsK-nn-hbI" id="54r-f1-g8N"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="658" y="507"/>
         </scene>
         <scene sceneID="15">
             <objects>
@@ -125,9 +191,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="gDg-sl-RXw" kind="relationship" relationship="viewControllers" id="ANZ-uI-wrk"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="U9d-pB-Q98"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="v6f-qf-8gs"/>
+                        <segue destination="gDg-sl-RXw" kind="relationship" relationship="viewControllers" id="3Lz-Yb-nEz"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -142,17 +208,30 @@
     <classes>
         <class className="CustomTabBarFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarFirstViewController.h"/>
-        </class>
-        <class className="CustomTabBarSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarSecondViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="CustomTabBarThirdViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarThirdViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="TicketCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TicketCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="descriptionTicketLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ticketImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ticketLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TicketListTable" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TicketListTable.h"/>
+            <relationships>
+                <relationship kind="outlet" name="headerTable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ticketTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
     </classes>

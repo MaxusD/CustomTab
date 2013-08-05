@@ -7,8 +7,10 @@
 //
 
 #import "CustomTabBarFirstViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation CustomTabBarFirstViewController
+@synthesize headerImage;
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,7 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"master_bg.png"]]]; 
+//	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"master_bg.png"]]]; 
+    [headerImage setImageWithURL: [NSURL URLWithString:@"http://aizol.com.ua/images/stories/gallery/polyuretan2.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+;
 }
 
 - (void)viewDidUnload
