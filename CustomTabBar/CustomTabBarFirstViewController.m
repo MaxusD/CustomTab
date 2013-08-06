@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
 //	[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"master_bg.png"]]]; 
-    [headerImage setImageWithURL: [NSURL URLWithString:@"http://aizol.com.ua/images/stories/gallery/polyuretan2.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [headerImage setImageWithURL: [NSURL URLWithString:@"http://aizol.com.ua/images/stories/gallery/polyuretan2.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
 ;
 }
 

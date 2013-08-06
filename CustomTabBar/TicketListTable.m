@@ -8,7 +8,6 @@
 
 #import "TicketListTable.h"
 #import "TicketCell.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface TicketListTable()
 @property (strong, nonatomic) NSArray *tableArray;
@@ -36,7 +35,7 @@
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTicketCellIdentifier];
     NSDictionary *dictionaryInfo = [tableArray objectAtIndex:indexPath.row];
     cell.sellInfoDictionary = dictionaryInfo;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[dictionaryInfo objectForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"ticketImage"]];
+    
     return cell;
 }
 
@@ -69,9 +68,9 @@
 
 - (void)loadData {
     
-    NSArray *arrayImages = [NSArray arrayWithObjects:@"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", nil];
+   
   
-      NSDictionary *cellInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *cellInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                               @"ticket1", @"ticket", 
                               @"description example", @"description", 
                               @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 

@@ -66,6 +66,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="sell-button-off.png" id="CQ9-Xz-UId"/>
                     <connections>
+                        <outlet property="map" destination="euc-es-I9Y" id="CTP-6Q-xLd"/>
                         <outlet property="view" destination="PgL-hM-9DL" id="X34-n9-xZp"/>
                     </connections>
                 </viewController>
@@ -127,8 +128,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vDr-te-tD9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="vDr-te-tD9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zmm-FB-RSz">
@@ -138,7 +139,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="NRW-eb-iAn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="NRW-eb-iAn">
                                                     <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,36 +206,6 @@
         <image name="me-button-off.png" width="106" height="49"/>
         <image name="sell-button-off.png" width="106" height="49"/>
     </resources>
-    <classes>
-        <class className="CustomTabBarFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarFirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="CustomTabBarThirdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarThirdViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="TicketCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TicketCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="descriptionTicketLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ticketImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="ticketLable" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TicketListTable" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TicketListTable.h"/>
-            <relationships>
-                <relationship kind="outlet" name="headerTable" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ticketTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

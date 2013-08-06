@@ -7,6 +7,7 @@
 //
 
 #import "TicketCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation TicketCell
 
@@ -43,9 +44,10 @@
     UIImage *ticketImage = [UIImage imageNamed:imageName];
     UIImage *backgroundImage = [UIImage imageNamed:backgroundImageName];
     
+    [self.ticketImageView setImageWithURL:[NSURL URLWithString:[newSellInfoDictionary objectForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"ticketImage.png"]];
+    
     self.ticketLable.text = titleName;
     self.descriptionTicketLabel.text = descriptionName;
-    self.ticketImageView.image = ticketImage;
     self.backImageView.image = backgroundImage;
 }
 

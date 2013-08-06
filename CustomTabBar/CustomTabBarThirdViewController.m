@@ -44,8 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     map.showsUserLocation = YES;
-    map.delegate = self;
+     map.showsUserLocation = YES;    
     [map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:[NSArray arrayWithObjects:@"Map", @"Sattelite", @"Hibride", nil]];
