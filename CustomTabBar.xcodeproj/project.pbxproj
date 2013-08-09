@@ -26,7 +26,6 @@
 		DDA0B36D177B9A92003F0D8C /* CustomTabBarFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B36C177B9A92003F0D8C /* CustomTabBarFirstViewController.m */; };
 		DDA0B374177B9A92003F0D8C /* CustomTabBarSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */; };
 		DDA18BE017A1DE980039F445 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA18BDF17A1DE980039F445 /* MapKit.framework */; };
-		DDA18BE317A1DFDF0039F445 /* CustomTabBarThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA18BE217A1DFDF0039F445 /* CustomTabBarThirdViewController.m */; };
 		DDA3CAA11786375F00D713AC /* bottom-blue-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9A1786375F00D713AC /* bottom-blue-bar@2x.png */; };
 		DDA3CAA21786375F00D713AC /* buy-button-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9B1786375F00D713AC /* buy-button-off@2x.png */; };
 		DDA3CAA31786375F00D713AC /* buy-button-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9C1786375F00D713AC /* buy-button-on@2x.png */; };
@@ -34,6 +33,7 @@
 		DDA3CAA51786375F00D713AC /* me-button-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9E1786375F00D713AC /* me-button-on@2x.png */; };
 		DDA3CAA61786375F00D713AC /* sell-button-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9F1786375F00D713AC /* sell-button-off@2x.png */; };
 		DDA3CAA71786375F00D713AC /* sell-button-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CAA01786375F00D713AC /* sell-button-on@2x.png */; };
+		DDA544EC17B2F33000AD6D3C /* CustomTabBarThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA544EB17B2F33000AD6D3C /* CustomTabBarThirdViewController.m */; };
 		DDA88C05178A1302005D1E56 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C03178A1302005D1E56 /* icon.png */; };
 		DDA88C06178A1302005D1E56 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C04178A1302005D1E56 /* icon@2x.png */; };
 		DDA88C0E178A2F8E005D1E56 /* master_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C0C178A2F8E005D1E56 /* master_bg@2x.png */; };
@@ -84,7 +84,6 @@
 		DD05B21717AF119C004758DC /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		DD05B21817AF119C004758DC /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		DD05B21917AF119C004758DC /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		DD5C655417A8726C00383783 /* CustomTabBarThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarThirdViewController.h; sourceTree = "<group>"; };
 		DDA0B352177B9A92003F0D8C /* CustomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA0B356177B9A92003F0D8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDA0B358177B9A92003F0D8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +100,6 @@
 		DDA0B372177B9A92003F0D8C /* CustomTabBarSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarSecondViewController.h; sourceTree = "<group>"; };
 		DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarSecondViewController.m; sourceTree = "<group>"; };
 		DDA18BDF17A1DE980039F445 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		DDA18BE217A1DFDF0039F445 /* CustomTabBarThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarThirdViewController.m; sourceTree = SOURCE_ROOT; };
 		DDA3CA9A1786375F00D713AC /* bottom-blue-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-blue-bar@2x.png"; sourceTree = "<group>"; };
 		DDA3CA9B1786375F00D713AC /* buy-button-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-button-off@2x.png"; sourceTree = "<group>"; };
 		DDA3CA9C1786375F00D713AC /* buy-button-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-button-on@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +107,8 @@
 		DDA3CA9E1786375F00D713AC /* me-button-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me-button-on@2x.png"; sourceTree = "<group>"; };
 		DDA3CA9F1786375F00D713AC /* sell-button-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sell-button-off@2x.png"; sourceTree = "<group>"; };
 		DDA3CAA01786375F00D713AC /* sell-button-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sell-button-on@2x.png"; sourceTree = "<group>"; };
+		DDA544EA17B2F33000AD6D3C /* CustomTabBarThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarThirdViewController.h; sourceTree = "<group>"; };
+		DDA544EB17B2F33000AD6D3C /* CustomTabBarThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarThirdViewController.m; sourceTree = "<group>"; };
 		DDA88C03178A1302005D1E56 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DDA88C04178A1302005D1E56 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		DDA88C0C178A2F8E005D1E56 /* master_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "master_bg@2x.png"; sourceTree = "<group>"; };
@@ -291,8 +291,8 @@
 				DDA0B36C177B9A92003F0D8C /* CustomTabBarFirstViewController.m */,
 				DDA0B373177B9A92003F0D8C /* CustomTabBarSecondViewController.m */,
 				DDA0B372177B9A92003F0D8C /* CustomTabBarSecondViewController.h */,
-				DDA18BE217A1DFDF0039F445 /* CustomTabBarThirdViewController.m */,
-				DD5C655417A8726C00383783 /* CustomTabBarThirdViewController.h */,
+				DDA544EA17B2F33000AD6D3C /* CustomTabBarThirdViewController.h */,
+				DDA544EB17B2F33000AD6D3C /* CustomTabBarThirdViewController.m */,
 				DDD6F92117A9B01D00A4555D /* Annotation.h */,
 				DDD6F92217A9B01D00A4555D /* Annotation.m */,
 				DDC18E3017AD927B000E96C9 /* TicketListTable.h */,
@@ -408,7 +408,6 @@
 				DDA0B367177B9A92003F0D8C /* CustomTabBarAppDelegate.m in Sources */,
 				DDA0B36D177B9A92003F0D8C /* CustomTabBarFirstViewController.m in Sources */,
 				DDA0B374177B9A92003F0D8C /* CustomTabBarSecondViewController.m in Sources */,
-				DDA18BE317A1DFDF0039F445 /* CustomTabBarThirdViewController.m in Sources */,
 				DDD6F92317A9B01D00A4555D /* Annotation.m in Sources */,
 				DDC18E3217AD927C000E96C9 /* TicketListTable.m in Sources */,
 				DDC18E3617AD96E3000E96C9 /* TicketCell.m in Sources */,
@@ -421,6 +420,7 @@
 				DD05B22017AF119C004758DC /* AFURLConnectionOperation.m in Sources */,
 				DD05B22117AF119C004758DC /* AFXMLRequestOperation.m in Sources */,
 				DD05B22217AF119C004758DC /* UIImageView+AFNetworking.m in Sources */,
+				DDA544EC17B2F33000AD6D3C /* CustomTabBarThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

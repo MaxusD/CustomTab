@@ -15,7 +15,8 @@
 @synthesize ticketImageView;
 @synthesize descriptionTicketLabel;
 @synthesize ticketLable;
-@synthesize sellInfoDictionary;
+@synthesize cellInfoDictionary;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -30,25 +31,24 @@
 {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+    // Configure the view for the selected stateI
 }
 
-- (void)setSellInfoDictionary:(NSDictionary *)newSellInfoDictionary {
-    sellInfoDictionary = newSellInfoDictionary;
+- (void)setCellInfoDictionary:(NSDictionary *)newCellInfoDictionary {
+    cellInfoDictionary = newCellInfoDictionary;
     
-    NSString *titleName = [newSellInfoDictionary objectForKey:@"ticket"];
-    NSString *descriptionName = [newSellInfoDictionary objectForKey:@"description"];
-    NSString *imageName = [newSellInfoDictionary objectForKey:@"image"];
-    NSString *backgroundImageName = [newSellInfoDictionary objectForKey:@"backgroundImage"];
-    
-    UIImage *ticketImage = [UIImage imageNamed:imageName];
+    NSString *titleName = [newCellInfoDictionary objectForKey:@"ticket"];
+    NSString *descriptionName = [newCellInfoDictionary objectForKey:@"description"];
+    NSString *backgroundImageName = [newCellInfoDictionary objectForKey:@"backgroundImage"];
     UIImage *backgroundImage = [UIImage imageNamed:backgroundImageName];
     
-    [self.ticketImageView setImageWithURL:[NSURL URLWithString:[newSellInfoDictionary objectForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"ticketImage.png"]];
+    [self.ticketImageView setImageWithURL:[NSURL URLWithString:[newCellInfoDictionary objectForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"ticketImage.png"]];
     
     self.ticketLable.text = titleName;
     self.descriptionTicketLabel.text = descriptionName;
     self.backImageView.image = backgroundImage;
+    
 }
+
 
 @end

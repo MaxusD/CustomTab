@@ -29,12 +29,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *kTicketCellIdentifier = @"TicketCell";  
-    
-    
+    static NSString *kTicketCellIdentifier = @"TicketCell";
+        
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTicketCellIdentifier];
     NSDictionary *dictionaryInfo = [tableArray objectAtIndex:indexPath.row];
-    cell.sellInfoDictionary = dictionaryInfo;
+    cell.cellInfoDictionary = dictionaryInfo;
     
     return cell;
 }
@@ -74,33 +73,33 @@
                               @"ticket1", @"ticket", 
                               @"description example", @"description", 
                               @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                              @"gradientBackground.png", @"background",
+                              @"topRow.png", @"backgroundImage",
                               nil];
     
     NSDictionary *cellInfo1 = [NSDictionary dictionaryWithObjectsAndKeys:@"ticket6", @"ticket", 
                                @"description example1", @"description", 
                                @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                               @"gradientBackground.png", @"background",
+                               @"middleRow.png", @"backgroundImage",
                                nil]; 
     NSDictionary *cellInfo2 = [NSDictionary dictionaryWithObjectsAndKeys:@"ticket2", @"ticket", 
                                @"description example2", @"description", 
                                @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                               @"gradientBackground.png", @"background",
+                               @"middleRow.png", @"backgroundImage",
                                nil]; 
     NSDictionary *cellInfo3 = [NSDictionary dictionaryWithObjectsAndKeys:@"ticket3", @"ticket", 
                                @"description example3", @"description", 
                                @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                               @"gradientBackground.png", @"background",
+                               @"middleRow.png", @"backgroundImage",
                                nil];
     NSDictionary *cellInfo4 = [NSDictionary dictionaryWithObjectsAndKeys:@"ticket4", @"ticket", 
                                @"description example4", @"description", 
                                @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                               @"gradientBackground.png", @"background",
+                               @"middleRow.png", @"backgroundImage",
                                nil]; 
     NSDictionary *cellInfo5 = [NSDictionary dictionaryWithObjectsAndKeys:@"ticket5", @"ticket", 
                                @"description example5", @"description", 
                                @"http://aizol.com.ua/templates/theme21/images/newsizol.jpg", @"image", 
-                               @"gradientBackground.png", @"background",
+                               @"bottomRow.png", @"backgroundImage",
                                nil]; 
     
     self.tableArray = [NSArray arrayWithObjects:cellInfo, cellInfo1, cellInfo2, cellInfo3, cellInfo4, cellInfo5, nil];

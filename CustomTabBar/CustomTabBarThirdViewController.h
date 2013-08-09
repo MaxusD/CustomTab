@@ -2,14 +2,14 @@
 //  CustomTabBarThirdViewController.h
 //  CustomTabBar
 //
-//  Created by Andrey Pushenko on 7/26/13.
+//  Created by Andrey Pushenko on 8/8/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface CustomTabBarThirdViewController : UIViewController <MKMapViewDelegate>
+@interface CustomTabBarThirdViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet MKMapView *map;
 

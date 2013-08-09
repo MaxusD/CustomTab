@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TicketListTable.h"
 
 @interface TicketCell : UITableViewCell
 
@@ -14,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ticketLable;
 @property (weak, nonatomic) IBOutlet UIImageView *ticketImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
-@property (strong, nonatomic) NSDictionary *sellInfoDictionary;
+@property (strong, nonatomic) NSDictionary *cellInfoDictionary;
 
 @end
