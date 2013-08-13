@@ -30,8 +30,20 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+  //  self.selectionStyle = UITableViewCellSelectionStyleGray;
+    UIView *viewSelected = [UIView new];
+    viewSelected.backgroundColor = [UIColor whiteColor];
+    self.selectedBackgroundView = viewSelected;   
+   
+}
 
-    // Configure the view for the selected stateI
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    if (highlighted) {
+        self.backImageView.image = [UIImage imageNamed:@"middleRowSelected.png"];
+    } else {
+        self.textLabel.textColor = [UIColor blackColor];
+    }
+    [super setHighlighted:highlighted animated:animated];
 }
 
 - (void)setCellInfoDictionary:(NSDictionary *)newCellInfoDictionary {
@@ -42,12 +54,12 @@
     NSString *backgroundImageName = [newCellInfoDictionary objectForKey:@"backgroundImage"];
     UIImage *backgroundImage = [UIImage imageNamed:backgroundImageName];
     
+     
     [self.ticketImageView setImageWithURL:[NSURL URLWithString:[newCellInfoDictionary objectForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"ticketImage.png"]];
     
     self.ticketLable.text = titleName;
     self.descriptionTicketLabel.text = descriptionName;
-    self.backImageView.image = backgroundImage;
-    
+    self.backImageView.image = backgroundImage;     
 }
 
 

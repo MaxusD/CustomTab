@@ -33,8 +33,8 @@
         
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTicketCellIdentifier];
     NSDictionary *dictionaryInfo = [tableArray objectAtIndex:indexPath.row];
-    cell.cellInfoDictionary = dictionaryInfo;
-    
+    cell.cellInfoDictionary = dictionaryInfo;    
+        
     return cell;
 }
 
@@ -112,7 +112,8 @@
 {
     [super viewDidLoad];
     self.headerTable.text = @"Ticket's list";
-    [self loadData];    
+    [self loadData];  
+    
 }
 
 
