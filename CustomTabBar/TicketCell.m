@@ -27,24 +27,24 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-  //  self.selectionStyle = UITableViewCellSelectionStyleGray;
-    UIView *viewSelected = [UIView new];
-    viewSelected.backgroundColor = [UIColor whiteColor];
-    self.selectedBackgroundView = viewSelected;   
-   
-}
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+//{
+//    [super setSelected:selected animated:animated];
+//  //  self.selectionStyle = UITableViewCellSelectionStyleGray;
+//    UIView *viewSelected = [UIView new];
+//    viewSelected.backgroundColor = [UIColor whiteColor];
+//    self.selectedBackgroundView = viewSelected;   
+//   
+//}
 
-- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
-    if (highlighted) {
-        self.backImageView.image = [UIImage imageNamed:@"middleRowSelected.png"];
-    } else {
-        self.textLabel.textColor = [UIColor blackColor];
-    }
-    [super setHighlighted:highlighted animated:animated];
-}
+//- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+//    if (highlighted) {
+//        self.backImageView.image = [UIImage imageNamed:@"middleRowSelected.png"];
+//    } else {
+//        self.textLabel.textColor = [UIColor blackColor];
+//    }
+//    [super setHighlighted:highlighted animated:animated];
+//}
 
 - (void)setCellInfoDictionary:(NSDictionary *)newCellInfoDictionary {
     cellInfoDictionary = newCellInfoDictionary;
