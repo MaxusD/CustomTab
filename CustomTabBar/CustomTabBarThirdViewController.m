@@ -64,7 +64,7 @@
     [map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:[NSArray arrayWithObjects:@"Map", @"Sattelite", @"Hibride", nil]];
-    [segmentedControl addTarget:self action:@selector(changeMapType) forControlEvents:UIControlEventValueChanged];
+    [segmentedControl addTarget:self action:@selector(changeMapType:) forControlEvents:UIControlEventValueChanged];
     segmentedControl.frame = CGRectMake(0.0f, 0.0f, 200.0f, 30.0f);
     segmentedControl.selectedSegmentIndex = 0;
     segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
