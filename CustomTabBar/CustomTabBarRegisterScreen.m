@@ -9,14 +9,22 @@
 #import "CustomTabBarRegisterScreen.h"
 
 @implementation CustomTabBarRegisterScreen
+@synthesize saveButton;
 @synthesize emailTextField;
 @synthesize surnameTextField;
 @synthesize nameTextField;
 
-- (void)viewDidUnload {
+//- (void)viewDidUnload {    
+//    [super viewDidUnload];
+//}
+
+- (void)dealloc {
     [self setNameTextField:nil];
     [self setSurnameTextField:nil];
     [self setEmailTextField:nil];
-    [super viewDidUnload];
+    [self setSaveButton:nil];
+    [super dealloc];
 }
+
+
 @end

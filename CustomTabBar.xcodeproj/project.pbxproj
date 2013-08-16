@@ -114,7 +114,7 @@
 		DDA88C04178A1302005D1E56 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		DDA88C0C178A2F8E005D1E56 /* master_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "master_bg@2x.png"; sourceTree = "<group>"; };
 		DDA88C0D178A2F8E005D1E56 /* master_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = master_bg.png; sourceTree = "<group>"; };
-		DDB4A91F17BC2FA8001C79C8 /* CustomTabBarRegisterScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarRegisterScreen.h; sourceTree = "<group>"; };
+		DDB4A91F17BC2FA8001C79C8 /* CustomTabBarRegisterScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarRegisterScreen.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		DDB4A92017BC2FA8001C79C8 /* CustomTabBarRegisterScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarRegisterScreen.m; sourceTree = "<group>"; };
 		DDB83ABD178B6889003DB86F /* bottom-blue-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-blue-bar.png"; sourceTree = "<group>"; };
 		DDB83ABE178B6889003DB86F /* buy-button-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-button-off.png"; sourceTree = "<group>"; };

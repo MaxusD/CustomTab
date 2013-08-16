@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTabBarRegisterScreen : UITableViewController
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *surnameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (retain, nonatomic) IBOutlet UIButton *saveButton;
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UITextField *surnameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
