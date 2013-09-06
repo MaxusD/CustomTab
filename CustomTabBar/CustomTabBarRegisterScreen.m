@@ -7,21 +7,28 @@
 //
 
 #import "CustomTabBarRegisterScreen.h"
+<<<<<<< HEAD
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
+=======
+>>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
 
 @implementation CustomTabBarRegisterScreen
 @synthesize saveButton;
 @synthesize emailTextField;
 @synthesize surnameTextField;
 @synthesize nameTextField;
+<<<<<<< HEAD
 @synthesize jsonResponse;
 @synthesize users;
+=======
+>>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
 
 //- (void)viewDidUnload {    
 //    [super viewDidUnload];
 //}
 
+<<<<<<< HEAD
 - (void)viewDidLoad {
     NSURL *url = [[NSURL alloc] initWithString:@"http://aizol-coma0e.1gb.ua/webmail/user/profile?id=10&token=4UkzmQ6dSUbTTGa"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url]; 
@@ -37,13 +44,18 @@
     
 }
 
+=======
+>>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
 - (void)dealloc {
     [self setNameTextField:nil];
     [self setSurnameTextField:nil];
     [self setEmailTextField:nil];
     [self setSaveButton:nil];
+<<<<<<< HEAD
     [self jsonResponse:nil];
     [self users:nil];
+=======
+>>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
     [super dealloc];
 }
 

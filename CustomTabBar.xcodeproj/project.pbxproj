@@ -498,6 +498,7 @@
 				DD05B22217AF119C004758DC /* UIImageView+AFNetworking.m in Sources */,
 				DDA544EC17B2F33000AD6D3C /* CustomTabBarThirdViewController.m in Sources */,
 				DDB4A92117BC2FA8001C79C8 /* CustomTabBarRegisterScreen.m in Sources */,
+<<<<<<< HEAD
 				DD9B3D9217D5460F0028AC21 /* NSObject+SBJson.m in Sources */,
 				DD9B3D9317D5460F0028AC21 /* SBJsonParser.m in Sources */,
 				DD9B3D9417D5460F0028AC21 /* SBJsonStreamParser.m in Sources */,
@@ -510,6 +511,8 @@
 				DD9B3D9B17D5460F0028AC21 /* SBJsonTokeniser.m in Sources */,
 				DD9B3D9C17D5460F0028AC21 /* SBJsonUTF8Stream.m in Sources */,
 				DD9B3D9D17D5460F0028AC21 /* SBJsonWriter.m in Sources */,
+=======
+>>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
