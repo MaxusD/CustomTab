@@ -33,8 +33,8 @@
         
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTicketCellIdentifier];
     NSDictionary *dictionaryInfo = [tableArray objectAtIndex:indexPath.row];
-    cell.cellInfoDictionary = dictionaryInfo;
-    
+    cell.cellInfoDictionary = dictionaryInfo;    
+        
     return cell;
 }
 
@@ -46,6 +46,26 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [UIColor clearColor];
+    
+    NSInteger sectionRows = [tableView numberOfRowsInSection:[indexPath section]];
+    NSInteger row = [indexPath row];
+    if (row == 0 && row == sectionRows - 1) {
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"topAndBottomRowSelected.png"]];
+    }
+    else if (row == 0) {        
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"topRowSelected.png"]];
+    }
+    else if (row == sectionRows - 1) {        
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bottomRowSelected.png"]];
+    }
+    else {
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"middleRowSelected.png"]];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,7 +132,8 @@
 {
     [super viewDidLoad];
     self.headerTable.text = @"Ticket's list";
-    [self loadData];    
+    [self loadData];  
+    
 }
 
 
