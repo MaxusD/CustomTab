@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
-	self.list = [NSArray arrayWithObjects:@"Example1", @"Example2", @"Example3", @"Example4", @"Example5", @"Example6", nil];
+	self.list = [NSArray arrayWithObjects:@"Example1", @"Example2", @"Example3", @"Example4", @"Example5", @"Example6", @"Example7", @"Example8", nil];
     self.tableView.rowHeight = 100;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gradientBackground.png"]];
@@ -40,7 +40,7 @@
     headerLabel.font = [UIFont boldSystemFontOfSize:22];
     headerLabel.backgroundColor = [UIColor clearColor];
     [containerView addSubview:headerLabel];
-    self.tableView.tableHeaderView = containerView;    
+    self.tableView.tableHeaderView = containerView;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,6 +50,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return list.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
