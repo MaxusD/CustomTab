@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "CustomTabBarRegisterScreen.h"
+#import "CustomTabBarRegisterViewController.h"
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
-#import "Reachability.h"
+
 
 @implementation CustomTabBarRegisterScreen
 @synthesize saveButton;
@@ -20,23 +20,29 @@
 @synthesize interestsTextView;
 @synthesize jsonResponse;
 
-//- (void)viewDidUnload {    
-//    [super viewDidUnload];
-//}
+
+-(void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - View lifecycle
 
 -(void)checkForConnection {
-    Reachability *reachbility = [[Reachability reachabilityForInternetConnection] retain];
-    NetworkStatus netStatus = [reachbility currentReachabilityStatus];
-    if (netStatus != ReachableViaWiFi) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No WI-FI available", @"AlertView") 
-        message:NSLocalizedString(@"You have no Wi-Fi avaliable. Please connect to a Wi-Fi network", @"AlertView") 
+    Reachability *reachability = [[Reachability reachabilityForInternetConnection] retain];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    [reachability release];
+    if (netStatus != ReachableViaWiFi || netStatus != ReachableViaWWAN) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection!", @"AlertView") 
+        message:NSLocalizedString(@"You haven't internet connection. Please connect to network", @"AlertView") 
         delegate:self 
-        cancelButtonTitle:NSLocalizedString(@"Cancel", @"AlertView") 
-        otherButtonTitles:NSLocalizedString(@"Open settings", @"AlertView"), nil]; 
+        cancelButtonTitle:NSLocalizedString(@"OK", @"AlertView") 
+        otherButtonTitles:NSLocalizedString(@"Go", @"AlertView"), nil]; 
         [alertView show];
-    }}
+    }
+}
 
-- (void)parsingJSON {
+- (void)loadData {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSURL *url = [[NSURL alloc] initWithString:@"http://aizol-coma0e.1gb.ua/webmail/user/profile?id=10&token=4UkzmQ6dSUbTTGa"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url]; 
     
@@ -53,17 +59,41 @@
         NSLog(@"Email: %@", [JSON valueForKeyPath:@"User.email"]);
         
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry, exeption from load data", @"AlertView") 
+        message:NSLocalizedString(@"Data haven't receive", @"AlertView") 
+        delegate:self 
+        cancelButtonTitle:NSLocalizedString(@"Cancel", @"AlertView") 
+        otherButtonTitles:NSLocalizedString(@"Try again", @"AlertView"), nil]; 
+        [alertView show];
+
     }];
     [operation start]; 
 }
 
-
-- (void)viewDidLoad {
-    [self checkForConnection];
-    [self parsingJSON];    
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    }
 }
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];        
+}
+
+- (void)viewDidUnload {    
+    [super viewDidUnload];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self checkForConnection];
+    [self loadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
 
 - (void)dealloc {
     [self setNameTextField:nil];

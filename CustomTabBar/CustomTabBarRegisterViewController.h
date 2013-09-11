@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-
-@interface CustomTabBarRegisterScreen : UITableViewController
+@interface CustomTabBarRegisterScreen : UITableViewController<UIAlertViewDelegate>
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *surnameTextField;
