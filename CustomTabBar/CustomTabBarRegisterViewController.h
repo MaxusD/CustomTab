@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
 
-@interface CustomTabBarRegisterScreen : UITableViewController<UIAlertViewDelegate>
+
+@interface CustomTabBarRegisterViewController : UITableViewController
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *surnameTextField;
@@ -17,8 +18,5 @@
 @property (retain, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (retain, nonatomic) IBOutlet UITextView *interestsTextView;
 @property (retain, nonatomic) NSArray *jsonResponse;
-
-#pragma mark - Check for internet connection
--(void)checkForConnection;
 
 @end

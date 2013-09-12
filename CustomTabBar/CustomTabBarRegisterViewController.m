@@ -10,8 +10,7 @@
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
 
-
-@implementation CustomTabBarRegisterScreen
+@implementation CustomTabBarRegisterViewController
 @synthesize saveButton;
 @synthesize emailTextField;
 @synthesize surnameTextField;
@@ -20,26 +19,11 @@
 @synthesize interestsTextView;
 @synthesize jsonResponse;
 
-
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark - View lifecycle
-
--(void)checkForConnection {
-    Reachability *reachability = [[Reachability reachabilityForInternetConnection] retain];
-    NetworkStatus netStatus = [reachability currentReachabilityStatus];
-    [reachability release];
-    if (netStatus != ReachableViaWiFi || netStatus != ReachableViaWWAN) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection!", @"AlertView") 
-        message:NSLocalizedString(@"You haven't internet connection. Please connect to network", @"AlertView") 
-        delegate:self 
-        cancelButtonTitle:NSLocalizedString(@"OK", @"AlertView") 
-        otherButtonTitles:NSLocalizedString(@"Go", @"AlertView"), nil]; 
-        [alertView show];
-    }
-}
 
 - (void)loadData {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
@@ -60,15 +44,34 @@
         
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry, exeption from load data", @"AlertView") 
-        message:NSLocalizedString(@"Data haven't receive", @"AlertView") 
-        delegate:self 
-        cancelButtonTitle:NSLocalizedString(@"Cancel", @"AlertView") 
-        otherButtonTitles:NSLocalizedString(@"Try again", @"AlertView"), nil]; 
+                                                            message:NSLocalizedString(@"Data haven't receive", @"AlertView") 
+                                                           delegate:self 
+                                                  cancelButtonTitle:NSLocalizedString(@"Cancel", @"AlertView") 
+                                                  otherButtonTitles:NSLocalizedString(@"Try again", @"AlertView"), nil]; 
         [alertView show];
-
+        
     }];
     [operation start]; 
 }
+
+
+-(void)checkForConnection {
+    Reachability *reachability = [[Reachability reachabilityForInternetConnection] retain];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    [reachability release];
+    if (netStatus != ReachableViaWiFi || netStatus != ReachableViaWWAN) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection!", @"AlertView") 
+        message:NSLocalizedString(@"You haven't internet connection. Please connect to network", @"AlertView") 
+        delegate:self 
+        cancelButtonTitle:NSLocalizedString(@"OK", @"AlertView") 
+        otherButtonTitles:NSLocalizedString(@"Go", @"AlertView"), nil]; 
+        [alertView show];
+    }
+    else {
+        [self loadData];
+    }
+}
+
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
@@ -87,8 +90,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self checkForConnection];
-    [self loadData];
+    [self checkForConnection];    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -76,7 +76,7 @@
         <scene sceneID="Ovz-67-NtG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtX-6N-oJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="JUQ-h2-RoA" customClass="CustomTabBarRegisterScreen" sceneMemberID="viewController">
+                <tableViewController id="JUQ-h2-RoA" customClass="CustomTabBarRegisterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Fbq-oM-p3J">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
