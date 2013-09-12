@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD05082117DE90480094B6FF /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05081917DE90480094B6FF /* NSArray+Safe.m */; };
+		DD05082217DE90480094B6FF /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05081B17DE90480094B6FF /* NSDictionary+Safe.m */; };
+		DD05082317DE90480094B6FF /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05081D17DE90480094B6FF /* NSMutableArray+Safe.m */; };
+		DD05082417DE90480094B6FF /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05081F17DE90480094B6FF /* NSMutableDictionary+Safe.m */; };
+		DD05082B17DE986B0094B6FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD05082A17DE986B0094B6FF /* SystemConfiguration.framework */; };
 		DD05B21A17AF119C004758DC /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05B20817AF119C004758DC /* AFHTTPClient.m */; };
 		DD05B21B17AF119C004758DC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05B20A17AF119C004758DC /* AFHTTPRequestOperation.m */; };
 		DD05B21C17AF119C004758DC /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD05B20C17AF119C004758DC /* AFImageRequestOperation.m */; };
@@ -46,6 +51,7 @@
 		DDA3CAA61786375F00D713AC /* sell-button-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CA9F1786375F00D713AC /* sell-button-off@2x.png */; };
 		DDA3CAA71786375F00D713AC /* sell-button-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA3CAA01786375F00D713AC /* sell-button-on@2x.png */; };
 		DDA544EC17B2F33000AD6D3C /* CustomTabBarThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA544EB17B2F33000AD6D3C /* CustomTabBarThirdViewController.m */; };
+		DDA6D82517DE8BB7009437B4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D80617DE8BB7009437B4 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDA88C05178A1302005D1E56 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C03178A1302005D1E56 /* icon.png */; };
 		DDA88C06178A1302005D1E56 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C04178A1302005D1E56 /* icon@2x.png */; };
 		DDA88C0E178A2F8E005D1E56 /* master_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA88C0C178A2F8E005D1E56 /* master_bg@2x.png */; };
@@ -78,6 +84,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD05081817DE90480094B6FF /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		DD05081917DE90480094B6FF /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		DD05081A17DE90480094B6FF /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		DD05081B17DE90480094B6FF /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		DD05081C17DE90480094B6FF /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		DD05081D17DE90480094B6FF /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		DD05081E17DE90480094B6FF /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		DD05081F17DE90480094B6FF /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		DD05082017DE90480094B6FF /* SafeCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeCategories.h; sourceTree = "<group>"; };
+		DD05082A17DE986B0094B6FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD05B20717AF119C004758DC /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		DD05B20817AF119C004758DC /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		DD05B20917AF119C004758DC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -147,6 +163,8 @@
 		DDA3CAA01786375F00D713AC /* sell-button-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sell-button-on@2x.png"; sourceTree = "<group>"; };
 		DDA544EA17B2F33000AD6D3C /* CustomTabBarThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarThirdViewController.h; sourceTree = "<group>"; };
 		DDA544EB17B2F33000AD6D3C /* CustomTabBarThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarThirdViewController.m; sourceTree = "<group>"; };
+		DDA6D80517DE8BB7009437B4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Classes/Reachability.h; sourceTree = "<group>"; };
+		DDA6D80617DE8BB7009437B4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Classes/Reachability.m; sourceTree = "<group>"; };
 		DDA88C03178A1302005D1E56 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DDA88C04178A1302005D1E56 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		DDA88C0C178A2F8E005D1E56 /* master_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "master_bg@2x.png"; sourceTree = "<group>"; };
@@ -187,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD05082B17DE986B0094B6FF /* SystemConfiguration.framework in Frameworks */,
 				DDD6FD9717A9B29800A4555D /* CoreLocation.framework in Frameworks */,
 				DDA18BE017A1DE980039F445 /* MapKit.framework in Frameworks */,
 				DDA0B357177B9A92003F0D8C /* UIKit.framework in Frameworks */,
@@ -198,6 +217,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD05081717DE90480094B6FF /* Safe */ = {
+			isa = PBXGroup;
+			children = (
+				DD05081817DE90480094B6FF /* NSArray+Safe.h */,
+				DD05081917DE90480094B6FF /* NSArray+Safe.m */,
+				DD05081A17DE90480094B6FF /* NSDictionary+Safe.h */,
+				DD05081B17DE90480094B6FF /* NSDictionary+Safe.m */,
+				DD05081C17DE90480094B6FF /* NSMutableArray+Safe.h */,
+				DD05081D17DE90480094B6FF /* NSMutableArray+Safe.m */,
+				DD05081E17DE90480094B6FF /* NSMutableDictionary+Safe.h */,
+				DD05081F17DE90480094B6FF /* NSMutableDictionary+Safe.m */,
+				DD05082017DE90480094B6FF /* SafeCategories.h */,
+			);
+			path = Safe;
+			sourceTree = "<group>";
+		};
 		DD05B20617AF119C004758DC /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +312,7 @@
 		DDA0B355177B9A92003F0D8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD05082A17DE986B0094B6FF /* SystemConfiguration.framework */,
 				DDD6FD9617A9B29800A4555D /* CoreLocation.framework */,
 				DDA18BDF17A1DE980039F445 /* MapKit.framework */,
 				DDA0B356177B9A92003F0D8C /* UIKit.framework */,
@@ -358,6 +394,8 @@
 		DDA4BD4E17839E6D0044E2C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DDA6D80517DE8BB7009437B4 /* Reachability.h */,
+				DDA6D80617DE8BB7009437B4 /* Reachability.m */,
 				DDA0B365177B9A92003F0D8C /* CustomTabBarAppDelegate.h */,
 				DDA0B366177B9A92003F0D8C /* CustomTabBarAppDelegate.m */,
 				DDA0B36B177B9A92003F0D8C /* CustomTabBarFirstViewController.h */,
@@ -381,6 +419,7 @@
 		DDA82C6717AF0634001A572E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DD05081717DE90480094B6FF /* Safe */,
 				DD9B3D7817D5460F0028AC21 /* SBJson */,
 				DD05B20617AF119C004758DC /* AFNetworking */,
 			);
@@ -421,6 +460,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = DDA0B347177B9A91003F0D8C;
 			productRefGroup = DDA0B353177B9A92003F0D8C /* Products */;
@@ -498,10 +538,6 @@
 				DD05B22217AF119C004758DC /* UIImageView+AFNetworking.m in Sources */,
 				DDA544EC17B2F33000AD6D3C /* CustomTabBarThirdViewController.m in Sources */,
 				DDB4A92117BC2FA8001C79C8 /* CustomTabBarRegisterScreen.m in Sources */,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9a7d637069d9815d419205c619dd3f58dd588da2
 				DD9B3D9217D5460F0028AC21 /* NSObject+SBJson.m in Sources */,
 				DD9B3D9317D5460F0028AC21 /* SBJsonParser.m in Sources */,
 				DD9B3D9417D5460F0028AC21 /* SBJsonStreamParser.m in Sources */,
@@ -514,11 +550,11 @@
 				DD9B3D9B17D5460F0028AC21 /* SBJsonTokeniser.m in Sources */,
 				DD9B3D9C17D5460F0028AC21 /* SBJsonUTF8Stream.m in Sources */,
 				DD9B3D9D17D5460F0028AC21 /* SBJsonWriter.m in Sources */,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5c7764dd99dd2b57d2b25426eab69dab287ae356
->>>>>>> 9a7d637069d9815d419205c619dd3f58dd588da2
+				DDA6D82517DE8BB7009437B4 /* Reachability.m in Sources */,
+				DD05082117DE90480094B6FF /* NSArray+Safe.m in Sources */,
+				DD05082217DE90480094B6FF /* NSDictionary+Safe.m in Sources */,
+				DD05082317DE90480094B6FF /* NSMutableArray+Safe.m in Sources */,
+				DD05082417DE90480094B6FF /* NSMutableDictionary+Safe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
