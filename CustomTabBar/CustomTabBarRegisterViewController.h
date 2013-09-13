@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
+#import "UITextView+Size.h"
 
 
-@interface CustomTabBarRegisterViewController : UITableViewController
+@interface CustomTabBarRegisterViewController : UITableViewController<UITableViewDelegate>
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *surnameTextField;

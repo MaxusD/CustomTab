@@ -282,7 +282,6 @@
 		DDA0B347177B9A91003F0D8C = {
 			isa = PBXGroup;
 			children = (
-				DDC1B88417E1252600E3ABD0 /* SystemConfiguration.framework */,
 				DDA0B35C177B9A92003F0D8C /* CustomTabBar */,
 				DDA0B355177B9A92003F0D8C /* Frameworks */,
 				DDA0B353177B9A92003F0D8C /* Products */,
@@ -300,6 +299,7 @@
 		DDA0B355177B9A92003F0D8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDC1B88417E1252600E3ABD0 /* SystemConfiguration.framework */,
 				DDD6FD9617A9B29800A4555D /* CoreLocation.framework */,
 				DDA18BDF17A1DE980039F445 /* MapKit.framework */,
 				DDA0B356177B9A92003F0D8C /* UIKit.framework */,
