@@ -17,6 +17,7 @@
 @synthesize nameTextField;
 @synthesize passwordTextField;
 @synthesize interestsTextView;
+@synthesize scrollView;
 @synthesize jsonResponse;
 
 -(void)didReceiveMemoryWarning {
@@ -29,7 +30,7 @@
 - (void)loadData {    
     NSURL *url = [[NSURL alloc] initWithString:@"http://aizol-coma0e.1gb.ua/webmail/user/profile?id=10&token=4UkzmQ6dSUbTTGa"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url]; 
-    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
         self.jsonResponse = [JSON valueForKey:@"User"];            
         NSDictionary *info = (NSDictionary *) JSON;
@@ -40,11 +41,15 @@
         self.passwordTextField.text = [info valueForKeyPath:@"User.password"];
         self.interestsTextView.text = [info valueForKeyPath:@"User.interests"];
         CGSize sizeRow = self.interestsTextView.textSize;
+        CGRect frame = self.interestsTextView.frame;
+        frame.size.height = sizeRow.height;
+        self.interestsTextView.frame = frame;
         [self.interestsTextView sizeToFit];
         self.tableView.rowHeight = sizeRow.height;
-//        NSIndexPath *indexPath= [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
+        NSIndexPath *indexPath= [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
+//        
+//        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];        
         [self.tableView reloadData];
-//        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
         
         
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -60,12 +65,11 @@
 }
 
 -(BOOL)reachable {
-    Reachability *reach = [Reachability reachabilityWithHostName:@"aizol-coma0e.1gb.ua/webmail/"];
+    Reachability *reach = [Reachability reachabilityWithHostName:@"google.com"];
     NetworkStatus internetStatus = [reach currentReachabilityStatus];
     if(internetStatus == NotReachable) {
         return NO;
-    }
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    }    
     return YES;
 }
 
@@ -91,6 +95,69 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
     }
 }
+
+- (void)jumpToNextTextField:(UITextField*)textField {
+     if (textField == self.nameTextField) {        
+        [self.surnameTextField becomeFirstResponder];
+        NSLog(@"textField == %@", textField);
+    }else if (textField == self.surnameTextField) {        
+        [self.emailTextField becomeFirstResponder];
+    }else if (textField == self.emailTextField) {
+        [self.passwordTextField becomeFirstResponder];        
+    }else if (textField == self.passwordTextField) {
+        [self.interestsTextView becomeFirstResponder];
+    }
+}
+
+//- (IBAction)textFieldDoneEditing:(id)sender {
+//    [sender resignFirstResponder];
+//}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+   [textField resignFirstResponder];
+   [self jumpToNextTextField:textField];
+    NSLog(@"textField == %@", textField);
+    return YES;
+}
+
+
+
+
+//- (void)textViewDidChange:(UITextView *)textView{
+//    CGRect rect = textView.frame;
+//    CGRect backRc = self.interestsTextView.frame;
+//    rect.size.height = textView.contentSize.height;
+//    backRc.size.height = textView.contentSize.height;
+//    
+//    if (backRc.size.height < 51) {
+//        backRc.size.height = 51;
+//    }
+//    
+//    textView.frame = rect;
+//    _registerContentView.descriptionBackgroundImageView.frame = backRc;
+//    CGRect rc = _viewFrame;
+//    rc.size.height += backRc.size.height - 51;
+//    _registerContentView.frame = rc;
+//    [self updateContentSize];
+//}
+#pragma mark - TextField Delegate
+
+//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+//    [self scrollToTextField:textField];
+//    [];
+//}
+
+
+
+
+//- (void) scrollToTextField: (UITextField *)textField {
+//    [scrollView setContentOffset:CGPointMake(0, textField.frame.origin.y - 100) animated:YES];
+//}
+
 
 
 - (void)viewDidLoad {
