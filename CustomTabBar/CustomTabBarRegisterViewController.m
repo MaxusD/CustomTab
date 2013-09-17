@@ -9,6 +9,8 @@
 #import "CustomTabBarRegisterViewController.h"
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
+#import "CustomTabBarSecondViewController.h"
+
 
 @implementation CustomTabBarRegisterViewController
 @synthesize saveButton;
@@ -19,13 +21,10 @@
 @synthesize interestsTextView;
 @synthesize scrollView;
 @synthesize jsonResponse;
+@synthesize registerTableView;
 
--(void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
-#pragma mark - View lifecycle
-
+#pragma mark - Connection and load data
 
 - (void)loadData {    
     NSURL *url = [[NSURL alloc] initWithString:@"http://aizol-coma0e.1gb.ua/webmail/user/profile?id=10&token=4UkzmQ6dSUbTTGa"];
@@ -40,16 +39,15 @@
         self.surnameTextField.text = [info valueForKeyPath:@"User.login"];
         self.passwordTextField.text = [info valueForKeyPath:@"User.password"];
         self.interestsTextView.text = [info valueForKeyPath:@"User.interests"];
-        CGSize sizeRow = self.interestsTextView.textSize;
-        CGRect frame = self.interestsTextView.frame;
-        frame.size.height = sizeRow.height;
-        self.interestsTextView.frame = frame;
-        [self.interestsTextView sizeToFit];
-        self.tableView.rowHeight = sizeRow.height;
-        NSIndexPath *indexPath= [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
-//        
-//        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];        
-        [self.tableView reloadData];
+      
+//        CGSize sizeRow = self.interestsTextView.textSize;
+//        CGRect frame = self.interestsTextView.frame;
+//        frame.size.height = sizeRow.height;
+//        self.interestsTextView.frame = frame;
+//        [self.interestsTextView sizeToFit];
+//        self.tableView.rowHeight = sizeRow.height;
+//        NSIndexPath *indexPath= [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
+//        [self.tableView reloadData];
         
         
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -91,8 +89,8 @@
 
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    if (buttonIndex == 1) {        
+        self.tabBarController.selectedIndex = 0;
     }
 }
 
@@ -109,9 +107,9 @@
     }
 }
 
-//- (IBAction)textFieldDoneEditing:(id)sender {
-//    [sender resignFirstResponder];
-//}
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     
@@ -119,46 +117,75 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
    [textField resignFirstResponder];
-   [self jumpToNextTextField:textField];
-    NSLog(@"textField == %@", textField);
+   [self jumpToNextTextField:textField];    
     return YES;
 }
 
 
 
+#pragma mark - TextView Delegate
 
-//- (void)textViewDidChange:(UITextView *)textView{
-//    CGRect rect = textView.frame;
-//    CGRect backRc = self.interestsTextView.frame;
-//    rect.size.height = textView.contentSize.height;
-//    backRc.size.height = textView.contentSize.height;
-//    
-//    if (backRc.size.height < 51) {
-//        backRc.size.height = 51;
-//    }
-//    
-//    textView.frame = rect;
-//    _registerContentView.descriptionBackgroundImageView.frame = backRc;
-//    CGRect rc = _viewFrame;
-//    rc.size.height += backRc.size.height - 51;
-//    _registerContentView.frame = rc;
-//    [self updateContentSize];
-//}
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+    
+    [registerTableView scrollToRowAtIndexPath:indexPath
+                             atScrollPosition:UITableViewScrollPositionTop
+                                     animated:YES];
+    
+    return YES;
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView {
+    
+}
+
+- (void)textViewDidChange:(UITextView *)textView{
+    
+}
+
+
+
+
 #pragma mark - TextField Delegate
 
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-//    [self scrollToTextField:textField];
-//    [];
-//}
+- (IBAction)editingDidBegin:(id)sender {
+    NSLog(@"editingDidBegin");
+    
+    if (sender == nameTextField) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        [registerTableView scrollToRowAtIndexPath:indexPath
+                                 atScrollPosition:UITableViewScrollPositionTop
+                                         animated:YES];
+        
+    }else if (sender == surnameTextField) {
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+        
+        [registerTableView scrollToRowAtIndexPath:indexPath
+                                 atScrollPosition:UITableViewScrollPositionTop
+                                         animated:YES];
+        
+    }else if (sender == emailTextField) {
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+        
+        [registerTableView scrollToRowAtIndexPath:indexPath
+                                 atScrollPosition:UITableViewScrollPositionTop
+                                         animated:YES];
+    }else if (sender == passwordTextField) {
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+        
+        [registerTableView scrollToRowAtIndexPath:indexPath
+                                 atScrollPosition:UITableViewScrollPositionTop
+                                         animated:YES];
+    }
+    
+}
 
+#pragma mark - View lifecycle
 
-
-
-//- (void) scrollToTextField: (UITextField *)textField {
-//    [scrollView setContentOffset:CGPointMake(0, textField.frame.origin.y - 100) animated:YES];
-//}
-
-
+-(void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];        

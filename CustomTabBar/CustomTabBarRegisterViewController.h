@@ -11,7 +11,9 @@
 #import "UITextView+Size.h"
 
 
-@interface CustomTabBarRegisterViewController : UITableViewController<UITableViewDelegate, UITextFieldDelegate, UIScrollViewDelegate>
+
+@interface CustomTabBarRegisterViewController : UITableViewController
+
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
 @property (retain, nonatomic) IBOutlet UITextField *surnameTextField;
@@ -20,5 +22,8 @@
 @property (retain, nonatomic) IBOutlet UITextView *interestsTextView;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) NSArray *jsonResponse;
+
+@property (strong, nonatomic) IBOutlet UITableView *registerTableView;
+
 
 @end
