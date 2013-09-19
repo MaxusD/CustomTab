@@ -9,7 +9,6 @@
 #import "CustomTabBarRegisterViewController.h"
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
-#import "CustomTabBarSecondViewController.h"
 
 
 @implementation CustomTabBarRegisterViewController
@@ -121,13 +120,22 @@
     return YES;
 }
 
+#pragma mark - TableView Delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 87;
+    CGSize sizeRow = self.interestsTextView.textSize;
+    if (indexPath.row == 4) {               
+        return 400/*sizeRow.height*/;        
+    }
+    return height;
+}
+
 
 
 #pragma mark - TextView Delegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
-    
     [registerTableView scrollToRowAtIndexPath:indexPath
                              atScrollPosition:UITableViewScrollPositionTop
                                      animated:YES];
@@ -142,7 +150,6 @@
 - (void)textViewDidChange:(UITextView *)textView{
     
 }
-
 
 
 
@@ -173,10 +180,10 @@
                                          animated:YES];
     }else if (sender == passwordTextField) {
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
-        
+       
         [registerTableView scrollToRowAtIndexPath:indexPath
                                  atScrollPosition:UITableViewScrollPositionTop
-                                         animated:YES];
+                                         animated:YES];        
     }
     
 }

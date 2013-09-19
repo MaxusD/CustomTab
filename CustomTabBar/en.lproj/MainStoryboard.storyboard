@@ -229,8 +229,14 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="cEr-3S-VOl" id="SIs-3U-ypk"/>
+                                                            </connections>
                                                         </textView>
                                                     </subviews>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="H8a-pa-phP" id="fKv-J3-lhI"/>
+                                                    </connections>
                                                 </scrollView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MLy-n9-LrF">
                                                     <rect key="frame" x="186" y="273" width="94" height="37"/>

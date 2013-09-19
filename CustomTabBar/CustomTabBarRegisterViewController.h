@@ -12,7 +12,7 @@
 
 
 
-@interface CustomTabBarRegisterViewController : UITableViewController
+@interface CustomTabBarRegisterViewController : UITableViewController<UITextViewDelegate>
 
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
