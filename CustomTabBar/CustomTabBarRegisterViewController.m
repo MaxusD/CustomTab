@@ -46,7 +46,7 @@
 //        [self.interestsTextView sizeToFit];
 //        self.tableView.rowHeight = sizeRow.height;
 //        NSIndexPath *indexPath= [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
-//        [self.tableView reloadData];
+        [self.tableView reloadData];
         
         
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -122,10 +122,15 @@
 
 #pragma mark - TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [super tableView:tableView heightForRowAtIndexPath:indexPath];
     CGFloat height = 87;
     CGSize sizeRow = self.interestsTextView.textSize;
-    if (indexPath.row == 4) {               
-        return 400/*sizeRow.height*/;        
+    NSLog(@"textField == %f", sizeRow.height);
+    if (indexPath.row == 4) {
+        CGRect frame = self.interestsTextView.frame;
+        frame.size.height = self.interestsTextView.contentSize.height;
+        self.interestsTextView.frame = frame;
+        return sizeRow.height+100;        
     }
     return height;
 }
