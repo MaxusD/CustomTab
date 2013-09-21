@@ -52,13 +52,13 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableViews cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
     UILabel *topLabel;
     UILabel *bottomLabel;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableViews dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
@@ -68,7 +68,7 @@
         const CGFloat LABEL_HEIGHT = 20;
         UIImage *image = [UIImage imageNamed:@"imageA.png"];
         CGRect topLabelFrame = CGRectMake(image.size.width + 2.0 * cell.indentationWidth, 
-                                          0.5 * (tableView.rowHeight - 2 * LABEL_HEIGHT), 
+                                          0.5 * (tableViews.rowHeight - 2 * LABEL_HEIGHT), 
                                           tableView.bounds.size.width - image.size.width - 
                                           4.0 * cell.indentationWidth - indicatorImage.size.width,LABEL_HEIGHT);
         topLabel = [[UILabel alloc] initWithFrame:topLabelFrame];

@@ -122,15 +122,16 @@
 
 #pragma mark - TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [super tableView:tableView heightForRowAtIndexPath:indexPath];
-    CGFloat height = 87;
-    CGSize sizeRow = self.interestsTextView.textSize;
-    NSLog(@"textField == %f", sizeRow.height);
-    if (indexPath.row == 4) {
+    [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    CGFloat height = 87;   
+    
+    if (indexPath.row == 4) { 
+        CGSize sizeRow = self.interestsTextView.textSize;
         CGRect frame = self.interestsTextView.frame;
         frame.size.height = self.interestsTextView.contentSize.height;
         self.interestsTextView.frame = frame;
-        return sizeRow.height+100;        
+        self.saveButton.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+        return sizeRow.height+150;        
     }
     return height;
 }
@@ -149,11 +150,13 @@
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView {
-    
+    [textView resignFirstResponder];
 }
 
 - (void)textViewDidChange:(UITextView *)textView{
-    
+//    CGRect frame = self.interestsTextView.frame;
+//    frame.size.height = self.interestsTextView.contentSize.height;
+//    self.interestsTextView.frame = frame;
 }
 
 
