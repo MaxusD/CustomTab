@@ -12,7 +12,7 @@
 
 
 
-@interface CustomTabBarRegisterViewController : UITableViewController<UITextViewDelegate>
+@interface CustomTabBarRegisterViewController : UITableViewController<UITextViewDelegate, UITextFieldDelegate>
 
 @property (retain, nonatomic) IBOutlet UIButton *saveButton;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;
@@ -20,7 +20,6 @@
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 @property (retain, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (retain, nonatomic) IBOutlet UITextView *interestsTextView;
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) NSArray *jsonResponse;
 
 @property (strong, nonatomic) IBOutlet UITableView *registerTableView;

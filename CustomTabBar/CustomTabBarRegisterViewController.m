@@ -18,7 +18,6 @@
 @synthesize nameTextField;
 @synthesize passwordTextField;
 @synthesize interestsTextView;
-@synthesize scrollView;
 @synthesize jsonResponse;
 @synthesize registerTableView;
 
@@ -120,6 +119,26 @@
     return YES;
 }
 
+
+
+#pragma mark - Button's actions
+//-(IBAction)sendToServer:(id)sender {
+//AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://aizol-coma0e.1gb.ua/webmail"]];     
+//NSDictionary *parameter = {@"username":self.nameTextField.text, @"password":self.surnameTextField.text};
+//[httpClient setParameterEncoding:AFJSONParameterEncoding];
+//[httpClient registerHTTPOperationClass:[AFJSONRequestOperation class]];
+//
+//[httpClient postPath:@"api/v1/user/login/" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//    // Print the response body in text
+//    BOOL *success = [[responseObject objectForKey:@"success"] boolValue];
+//    NSLog(@"Response: %@",responseObject);
+//} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//    [self handleConnectionError:error];
+//}];
+//}
+
+
+
 #pragma mark - TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -130,7 +149,6 @@
         CGRect frame = self.interestsTextView.frame;
         frame.size.height = self.interestsTextView.contentSize.height;
         self.interestsTextView.frame = frame;
-        self.saveButton.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
         return sizeRow.height+150;        
     }
     return height;
@@ -149,14 +167,15 @@
     return YES;
 }
 
--(void)textViewDidEndEditing:(UITextView *)textView {
-    [textView resignFirstResponder];
-}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text { 
+    if ([text isEqualToString:@"\n"]) { 
+        [textView resignFirstResponder]; 
+    } 
+    return YES; 
+} 
 
 - (void)textViewDidChange:(UITextView *)textView{
-//    CGRect frame = self.interestsTextView.frame;
-//    frame.size.height = self.interestsTextView.contentSize.height;
-//    self.interestsTextView.frame = frame;
 }
 
 
