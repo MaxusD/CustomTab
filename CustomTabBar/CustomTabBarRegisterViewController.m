@@ -122,20 +122,19 @@
 
 
 #pragma mark - Button's actions
-//-(IBAction)sendToServer:(id)sender {
-//AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://aizol-coma0e.1gb.ua/webmail"]];     
-//NSDictionary *parameter = {@"username":self.nameTextField.text, @"password":self.surnameTextField.text};
-//[httpClient setParameterEncoding:AFJSONParameterEncoding];
-//[httpClient registerHTTPOperationClass:[AFJSONRequestOperation class]];
-//
-//[httpClient postPath:@"api/v1/user/login/" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//    // Print the response body in text
-//    BOOL *success = [[responseObject objectForKey:@"success"] boolValue];
-//    NSLog(@"Response: %@",responseObject);
-//} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//    [self handleConnectionError:error];
-//}];
-//}
+-(IBAction)sendToServer:(id)sender {
+AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://aizol-coma0e.1gb.ua/webmail"]];     
+    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys: self.emailTextField.text, @"email", self.passwordTextField.text, @"password", nil];
+[httpClient setParameterEncoding:AFJSONParameterEncoding];
+[httpClient registerHTTPOperationClass:[AFJSONRequestOperation class]];
+
+[httpClient postPath:@"/auth/login/" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    BOOL *success = [[responseObject objectForKey:@"success"] boolValue];
+    NSLog(@"Response: %@", responseObject);
+} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    [self handleConnectionError:error];
+}];
+}
 
 
 
@@ -159,7 +158,7 @@
 #pragma mark - TextView Delegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
     [registerTableView scrollToRowAtIndexPath:indexPath
                              atScrollPosition:UITableViewScrollPositionTop
                                      animated:YES];
@@ -168,16 +167,19 @@
 }
 
 
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text { 
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    [self.registerTableView beginUpdates];  
+    [textView setFrame:CGRectMake(textView.frame.origin.x, textView.frame.origin.y, self.interestsTextView.contentSize.width, self.interestsTextView.contentSize.height)];    
+    
     if ([text isEqualToString:@"\n"]) { 
         [textView resignFirstResponder]; 
     } 
+    [self.registerTableView endUpdates];
     return YES; 
 } 
 
-- (void)textViewDidChange:(UITextView *)textView{
+- (void)textViewDidBeginEditing:(UITextView *)textView {
 }
-
 
 
 #pragma mark - TextField Delegate
@@ -222,7 +224,7 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];        
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload {    
