@@ -123,17 +123,24 @@
 
 #pragma mark - Button's actions
 -(IBAction)sendToServer:(id)sender {
-AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://aizol-coma0e.1gb.ua/webmail"]];     
-    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys: self.emailTextField.text, @"email", self.passwordTextField.text, @"password", nil];
-[httpClient setParameterEncoding:AFJSONParameterEncoding];
-[httpClient registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://aizol-coma0e.1gb.ua"]];
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
+    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys: self.emailTextField.text, @"email", self.passwordTextField.text, @"password", nil];    
+    
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"http://aizol-coma0e.1gb.ua/webmail/auth/login" parameters:parameter];
+    
+       
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [request setValue:[NSString stringWithFormat:@"application/json"] forHTTPHeaderField:@"Accept"];
+        
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [operation start];
 
-[httpClient postPath:@"/auth/login/" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    BOOL *success = [[responseObject objectForKey:@"success"] boolValue];
-    NSLog(@"Response: %@", responseObject);
-} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [self handleConnectionError:error];
-}];
 }
 
 
